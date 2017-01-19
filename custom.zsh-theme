@@ -31,7 +31,7 @@ function git_prompt_info {
 }
 
 function parse_git_dirty {
-  [[ "$(git status 2> /dev/null | grep 'working directory clean' | wc -l | tr -d '[[:space:]]')" == "0" ]] && echo "*"
+  [[ "$(git status 2> /dev/null | grep 'clean' | wc -l | tr -d '[[:space:]]')" == "0" ]] && echo "*"
 }
 
 CHAR="→"
